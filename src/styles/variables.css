@@ -1,0 +1,14 @@
+:root {
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-body: 'Noto Sans KR', 'Segoe UI', sans-serif;
+  --bg-dark: #11100e;
+  --bg-soft: #f6ede4;
+  --panel: #fff9f2;
+  --panel-strong: #201814;
+  --text: #201814;
+  --muted: #776355;
+  --line: rgba(32, 24, 16, 0.1);
+  --warm: #ef6b3c;
+  --gold: #f4ba55;
+  --shadow: 0 18px 48px rgba(21, 16, 13, 0.12);
+}

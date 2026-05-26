@@ -1,62 +1,66 @@
-# Gato Gordo - Web Estática
+# Gato Gordo Food
 
-Sitio web estático para el restaurante de comida coreana **Gato Gordo**.  
-El objetivo del proyecto es presentar de forma simple, visual y ordenada la identidad del restaurante, su menú, información de contacto y datos relevantes para los clientes.
+Primera versión del sitio web estático de **Gato Gordo**, implementada en **React 19** con **Vite 7** y una arquitectura modular orientada a crecimiento.
 
-## Descripción
+La web está pensada para presentar:
 
-Este repositorio contiene una página web estática diseñada para promocionar el restaurante **Gato Gordo**, especializado en comida coreana. La web puede incluir secciones como presentación del local, menú de platos, categorías gastronómicas, información de horarios, ubicación, contacto y enlaces a redes sociales.
+- Carta de mayo 2026.
+- Identidad del restaurante.
+- Ubicación y horarios.
+- Canales de contacto.
+- Base visual responsiva para futuras iteraciones.
 
-El proyecto está pensado como una base simple, fácil de mantener y desplegar, ideal para una primera versión pública del sitio.
+## Stack
 
-## Objetivos del proyecto
+- React `19.1.1`
+- React DOM `19.1.1`
+- Vite `7.1.4`
+- `@vitejs/plugin-react` `6.0.2`
+- ESLint `10.0.0`
 
-- Presentar la marca **Gato Gordo** de forma clara y atractiva.
-- Mostrar el menú del restaurante con platos, descripciones y precios.
-- Facilitar el acceso a información de contacto, horarios y ubicación.
-- Contar con una estructura simple para futuras mejoras.
-- Permitir un despliegue rápido como sitio estático.
+## Scripts
 
-## Características principales
+- `npm run dev`: levanta el proyecto en `http://localhost:3001`
+- `npm run build`: genera build de producción
+- `npm run lint`: ejecuta validación estática
+- `npm run preview`: sirve el build en `http://localhost:4174`
 
-- Página principal de presentación.
-- Sección de menú gastronómico.
-- Categorías de comida coreana.
-- Información del restaurante.
-- Datos de contacto.
-- Diseño responsive para dispositivos móviles y escritorio.
-- Estructura simple y mantenible.
+## Estructura
 
-## Tecnologías sugeridas
+```text
+src/
+  app/                 # Bootstrap y composición principal
+  components/          # Piezas comunes y layout
+  data/                # Datos desacoplados de navegación, carta y restaurante
+  features/            # Secciones funcionales de la página
+  styles/              # Variables, globales y utilidades
+  utils/               # Helpers de formato y navegación
+```
 
-Este proyecto puede ser desarrollado con tecnologías web básicas:
+## Contenido cargado en esta versión
 
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap, Tailwind CSS o CSS personalizado
+- Hero de marca con CTA al menú.
+- Carta organizada por categorías a partir de `CARTA MAYO 2026.pdf`.
+- Sección de propuesta gastronómica.
+- Sección de ubicación y horarios.
+- Sección de contacto con acceso directo a WhatsApp y teléfono.
+- Footer con navegación resumida.
 
-También puede adaptarse posteriormente a frameworks como:
+## Fuentes usadas para los datos
 
-- React
-- Angular
-- Vue
-- Astro
-- Next.js
+- Menú base: `.local/.base/CARTA MAYO 2026.pdf`
+- Contexto de implementación: `.local/.context/AGENT.md` y `.local/.context/CRITERIOS.md`
+- Datos públicos de dirección, teléfono y horarios: referencias públicas recientes de Uber Eats / listados web
 
-## Estructura sugerida del proyecto
+## Notas
 
-```bash
-gato-gordo-web/
-├── index.html
-├── README.md
-├── assets/
-│   ├── images/
-│   ├── icons/
-│   └── fonts/
-├── css/
-│   └── styles.css
-├── js/
-│   └── main.js
-└── data/
-    └── menu.json
+- El proyecto usa el puerto `3001` para desarrollo porque `3000` quedó reservado.
+- El enlace exacto de Instagram no quedó confirmado en esta iteración y fue dejado como pendiente en la UI.
+- La validación obligatoria `npm run build` y `npm run lint` requiere instalar dependencias primero.
+
+## Próximos pasos recomendados
+
+1. Confirmar Instagram oficial y cualquier otro canal social.
+2. Sustituir bloques visuales abstractos por fotografía real del local o platos.
+3. Revisar con negocio si los horarios públicos siguen vigentes al **26 de mayo de 2026**.
+4. Evaluar una segunda iteración con administración externa del menú vía JSON o CMS.

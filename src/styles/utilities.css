@@ -1,0 +1,57 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(32, 24, 16, 0.1);
+  background: #f2e4d5;
+  color: #432c1d;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badge--accent,
+.badge--neutral {
+  background: #f2e4d5;
+  color: #432c1d;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.95rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button--primary {
+  background: linear-gradient(135deg, #ef6b3c, #f4ba55);
+  color: #1d140d;
+}
+
+.button--secondary {
+  background: #fff8f1;
+  border-color: rgba(36, 24, 16, 0.14);
+  color: #2a1c12;
+}
+
+.button--large {
+  min-height: 3.2rem;
+  padding-inline: 1.35rem;
+}
+
+.container {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.container--wide {
+  width: min(1240px, calc(100% - 2rem));
+}
